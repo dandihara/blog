@@ -22,7 +22,10 @@ function App() {
   function 제목바꾸기(){
     var newArray = [...글제목]; //deep copy
     newArray[0] = changeTitle;
-    글제목변경(newArray);  
+    글제목변경(newArray); 
+   //['오늘의 식단','jordan1','강남 우동 맛집','TomBoy']
+   // ['여자 코트 추천','jordan1','강남 우동 맛집','TomBoy']
+   //
   }
 
   function 제목리스트정렬(){
