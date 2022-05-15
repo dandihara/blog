@@ -19,6 +19,8 @@ function App() {
  
   let [likeCount,카운트변경] = useState(0);
 
+  let [numbers, get_numbers] = useState([]);
+  
   function 제목바꾸기(){
     var newArray = [...글제목]; //deep copy
     newArray[0] = changeTitle;
@@ -35,20 +37,28 @@ function App() {
     console.log(arr)
   }
 
+  function random_lotto_recommand(){
+    get_numbers();
+
+  }
+
 
   return (
     <div className="App">
-      <div className = "black-nav">
-        <div>MOON BLOG</div>
+      <div claasName = "main_logo">
+        <img src= "./logo.png"/>
       </div>
-      <button onClick = {() => {제목바꾸기()}}>제목변경 버튼</button>
+      <button onClick={() => {random_lotto_recommand()}}>번호를 알려줘!!</button>
+      <div className='random_result'>
+        {numbers}
+      </div>
+      {/* <button onClick = {() => {제목바꾸기()}}>제목변경 버튼</button>
       <button onClick={()=>{제목리스트정렬()}}> 정렬 </button>
       <img src = {jordan_img}/>
       <Board title={글제목[0]}/>
       <hr/>
       <Board title = {글제목[1]}/>
-      <Modal></Modal>
-      
+      <Modal></Modal> */}
     </div>
   );
 }
